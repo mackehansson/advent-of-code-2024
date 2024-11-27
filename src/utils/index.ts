@@ -29,3 +29,6 @@
  *     import { myUtil } from '../utils'
  *
  */
+export function getInputAsArray(input: string): string[] {
+  return input.split(/\s+/)
+}

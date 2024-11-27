@@ -1,15 +1,16 @@
 import run from "aocrunner";
+import { getInputAsArray } from "../utils/index.js";
 
 const parseInput = (rawInput: string) => rawInput;
 
 const part1 = (rawInput: string) => {
-  const input = parseInput(rawInput);
+  const input = getInputAsArray(rawInput);
 
   return;
 };
 
 const part2 = (rawInput: string) => {
-  const input = parseInput(rawInput);
+  const input = getInputAsArray(rawInput);
 
   return;
 };
