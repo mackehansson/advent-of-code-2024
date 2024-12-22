@@ -30,5 +30,17 @@
  *
  */
 export function getInputAsArray(input: string): string[] {
-  return input.split(/\s+/)
+    return input.split(/\s+/);
 }
+
+export const directions = {
+    up: [-1, 0], // row-1, col+0
+    down: [1, 0], // row+1, col+0
+    left: [0, -1], // row+0, col-1
+    right: [0, 1], // row+0, col+1
+    // Diagonals if needed:
+    upLeft: [-1, -1],
+    upRight: [-1, 1],
+    downLeft: [1, -1],
+    downRight: [1, 1],
+};
