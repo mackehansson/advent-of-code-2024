@@ -1,6 +1,7 @@
 import run from "aocrunner";
 import { getInputAsArray } from "../utils/index.js";
 const parseInput = (rawInput: string) => rawInput;
+import { Day2Solver } from "./day2solver.js";
 
 class PuzzleProcessor {
     input: number[];
@@ -68,8 +69,9 @@ const part1 = (rawInput: string) => {
 };
 
 const part2 = (rawInput: string) => {
-    const puzzle1 = new PuzzleProcessor(rawInput);
-    return puzzle1.puzzle1result;
+    const puzzle2 = new Day2Solver(rawInput);
+    // const puzzle1 = new PuzzleProcessor(rawInput);
+    return puzzle2.main();
 };
 
 run({
@@ -92,5 +94,5 @@ run({
         solution: part2,
     },
     trimTestInputs: true,
-    onlyTests: true,
+    onlyTests: false,
 });
