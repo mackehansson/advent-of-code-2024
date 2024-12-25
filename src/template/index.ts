@@ -14,12 +14,14 @@ type Direction = "N" | "S" | "E" | "W";
  */
 const parseInput = (rawInput: string) => rawInput;
 const getInput = (rawInput: string) => {
+    const split = rawInput.split("\n");
     const inputAsArray = getInputAsArray(rawInput);
     const inputAsGrid = inputAsArray.map((line) => line.split(""));
     const inputAsNumbers = inputAsArray.map(Number);
 
     return {
-        raw: rawInput,
+        splitted: split,
+        raw: rawInput.replace(/\r\n/g, "\n"),
         lines: inputAsArray,
         grid: inputAsGrid,
         numbers: inputAsNumbers,
